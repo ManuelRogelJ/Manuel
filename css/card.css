@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT-Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#a55144, #50679a);
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px (0,0,0,0.25);
+}
+
+.margin1{
+    gap: 15px;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.margin2{
+    gap: 15px;
+    align-items: center;
+}
+
+.margin3{
+    gap: 15px;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.card .poster{
+    position: relative;
+    overflow: hidden;
+}
+
+.margin1 .card .poster::before{
+    content: '';
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #a63d10 50%, transparent);
+    transition: 0.5s;
+    z-index: 1;
+}
+.margin2 .card .poster::before{
+    content: '';
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #106ca6 50%, transparent);
+    transition: 0.5s;
+    z-index: 1;
+}
+.margin3 .card .poster::before{
+    content: '';
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #2f231f 50%, transparent);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.card:hover .poster::before{
+    bottom: 0px;
+}
+
+.card .poster img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.card:hover .poster img{
+    transform: translateY(-50px);
+    filter: blur(5px);
+}
+
+.card .details{
+    position: absolute;
+    bottom: -225px;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.card:hover .details{
+    bottom: 0px;
+}
+
+.card .details .logo{
+    max-width: 180px;
+}
+
+.card .details h3{
+    font-size: 0.8em;
+    color: white;
+}
+
+.card .details .ratings{
+    position: relative;
+    padding: 5px 0;
+}
+
+.card .details .ratings .fa-star {
+    color: #f7f406;
+    font-size: 1em;
+}
+
+.card .details .ratings span{
+    color: rgb(172, 190, 161);
+    margin-left: 5px;
+}
+
+.card .details .tags{
+    position: relative;
+    margin-top: 5px;
+}
+
+.margin1 .card .details .tags span{
+    padding: 2px 5px;
+    color: white;
+    background-color: #0a1b27;
+    border-radius: 4px;
+}
+
+.margin1 .card .details .tags span:nth-child(1){
+    background-color: #125127;
+}
+
+.margin2 .card .details .tags span{
+    padding: 2px 5px;
+    color: white;
+    background-color: #0390f5;
+    border-radius: 4px;
+}
+
+.margin2 .card .details .tags span:nth-child(1){
+    background-color: #ff5722;
+}
+
+.margin3 .card .details .tags span{
+    padding: 2px 5px;
+    color: white;
+    background-color: #961c13;
+    border-radius: 4px;
+}
+
+.margin3 .card .details .tags span:nth-child(1){
+    background-color: #ae1f4c;
+}
+
+.card .details .info{
+    color: white;
+    margin-top: 20px;
+}
+
+.card .details .cast{
+    position: relative;
+}
+.card .details .cast h4{
+    color: white;
+    margin-top: 10px;
+}
+
+.card .details .cast ul{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card .details .cast ul li{
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.card .details .cast ul li img{
+    max-width: 100%;
+}
+
+a{
+    color:white;
+}
